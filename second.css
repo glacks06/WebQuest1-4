@@ -4,56 +4,23 @@
 }
 #base{
     width: 875px; margin: 50px auto;
-    display: flex; flex-wrap: wrap;
     justify-content: center;
-    
 }
 #base>div{
-    width: 105px; height: 95px; margin: 10px;
-    border-radius: 10px;
-    transform: skewX(-10deg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    transition-duration: 1s;
-    z-index: 0;
-    background-color: lightgray;
+    width: 100%; height: 95px; margin: 10px 0px;
+    display: flex; justify-content: center;
 }
 
-#base>div:hover{
-    transform: scale(1.5, 1.5) skewX(-10deg);
+img{
+    display: block;
+    width: 105px; height: 95px; margin: 0px 10px;
+    border-radius: 10px;
+    transform: skewX(-10deg);
+    transition-duration: 1s;
+    background-color: lightgray;
+}
+img:hover{
+    transform: skewX(-10deg) scale(1.5, 1.5);
     z-index: 1;
     background-color: pink;
 }
-
-.item1{background-image: url(hero01.png);}
-.item2{background-image: url(hero02.png);}
-.item3{background-image: url(hero03.png);}
-.item4{background-image: url(hero04.png);}
-.item5{background-image: url(hero05.png);}
-.item6{background-image: url(hero06.png);}
-.item7{background-image: url(hero07.png);}
-.item8{background-image: url(hero08.png);}
-.item9{background-image: url(hero09.png);}
-.item10{background-image: url(hero10.png);}
-.item11{background-image: url(hero11.png);}
-.item12{background-image: url(hero12.png);}
-.item13{background-image: url(hero13.png);}
-.item14{background-image: url(hero14.png);}
-.item15{background-image: url(hero15.png);}
-.item16{background-image: url(hero16.png);}
-.item17{background-image: url(hero17.png);}
-.item18{background-image: url(hero18.png);}
-.item19{background-image: url(hero19.png);}
-.item20{background-image: url(hero20.png);}
-.item21{background-image: url(hero21.png);}
-.item22{background-image: url(hero22.png);}
-.item23{background-image: url(hero23.png);}
-.item24{background-image: url(hero24.png);}
-.item25{background-image: url(hero25.png);}
-.item26{background-image: url(hero26.png);}
-.item27{background-image: url(hero27.png);}
-.item28{background-image: url(hero28.png);}
-.item29{background-image: url(hero29.png);}
-.item30{background-image: url(hero30.png);}
-.item31{background-image: url(hero31.png);}
-.item32{background-image: url(hero32.png);}
