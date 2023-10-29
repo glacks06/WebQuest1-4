@@ -55,33 +55,37 @@
     right: 10px; bottom: 10px;
 }
 
-#base .contents .ariticleBox{
+#base .contents .sectionBox{
     width: 100%; height: 600px;
     display: flex;
 }
 
-.item{
+.articleBox{
     width: 250px; height: 600px; padding: 70px 40px;
-    display: flex;
     opacity: 0.4;
     position: relative;
     background-image: url('back.png');
     transition-duration: 1s;
 } 
-.item:hover{opacity: 1;}
+.articleBox:hover{opacity: 1;}
 
-.item .back{
+.articleBox .back{
     width: 250px; height: 600px;
     position: absolute; top: 0px; right: 0px;
     z-index: 0;
     background-color: rgb(50, 50, 50);
     transition-duration: 0.5s;
 }
-.item:hover .back{width: 0px;}
+.articleBox:hover .back{width: 0px;}
 
-.item .uitem{z-index: 1;}
-.item .uitem .itemNum{font-size: 40px; line-height: 20px;}
-.item .uitem>div{margin-bottom: 40px; color: white;}
+.articleBox .item{
+    width: 170px; height: 460px;
+    display: flex; z-index: 1;
+}
+
+.articleBox .item .uitem{z-index: 1;}
+.articleBox .item .uitem .itemNum{font-size: 40px; line-height: 20px;}
+.articleBox .item .uitem>div{margin-bottom: 40px; color: white;}
 
 
 .item .ditem1{
@@ -112,7 +116,7 @@
     position: absolute; align-self: flex-end;
     transition-duration: 0.5s; z-index: 1;
 }
-.item:hover .ditem1{width: 200px; height: 111.76px;}
-.item:hover .ditem2{width: 200px; height: 111.76px;}
-.item:hover .ditem3{width: 200px; height: 111.76px;}
-.item:hover .ditem4{width: 200px; height: 111.76px;}
+.articleBox:hover .ditem1{width: 200px; height: 111.76px;}
+.articleBox:hover .ditem2{width: 200px; height: 111.76px;}
+.articleBox:hover .ditem3{width: 200px; height: 111.76px;}
+.articleBox:hover .ditem4{width: 200px; height: 111.76px;}
