@@ -2,12 +2,14 @@
     margin: 0px; padding: 0px;
     box-sizing: border-box;
 }
-#base{
+#contents{
     width: 1280px; height: 720px; margin: 50px auto;
     background-color: rgb(50, 50, 50);
     display: flex;
 }
-#base div.titleBox{
+
+/* Title */
+#contents .titleBox{
     width: 280px; height: 100%;
     border-right: 2px solid white;
     display: flex; flex-direction: column;
@@ -19,7 +21,7 @@
     display: flex;
     align-items: center;
 }
-.titleBox .titleUp div{
+.titleBox .titleUp p{
     width: 280px; height: 50px;
     font-style: italic;
     font-size: 30pt; line-height: 50px;
@@ -28,40 +30,49 @@
 }
 .titleBox .titleDown{
     width: 280px; height: 360px;
+    display: flex;
+    justify-content: center;
     position: relative;
 }
-.titleBox .titleDown div{
-    width: 280px;
-    font-family: Verdana; text-align: center; font-size: 10px; line-height: 16pt;
-    text-align: center;
-    position: absolute; bottom: 20px;
+.titleBox .titleDown p{
+    line-height: 16pt;
+    text-align: center; 
+    font-size: 10px; 
+    font-family: Verdana; 
+    position: absolute; 
+    bottom: 20px;
 }
 
-#base .contents{
+/* contents box 영역 */
+#contents .contents_box{
     width: 1000px; height: 720px;
-    display: flex; flex-direction: column;
+    display: flex; 
+    flex-direction: column;
 }
-#base .contents div.navBox{
+
+/* navigation 영역 */
+nav{
     width: 100%; height: 120px;
     border-bottom: 2px solid white;
     position: relative;
 }
-
-#base .contents .navBox div.mailImg{
+nav .mail_img{
+    display: block;
     width: 30px; height: 30px;
-    background-image: url('mail.png');
-    background-size: contain;
     position: absolute;
     right: 10px; bottom: 10px;
 }
 
+/* section 영역 */
 section{
     width: 100%; height: 600px;
     display: flex;
 }
-
 article{
     width: 250px; height: 600px; padding: 70px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
     opacity: 0.4;
     position: relative;
     background-image: url('back.png');
@@ -78,24 +89,26 @@ article::before{
     background-color: rgb(50, 50, 50);
     transition-duration: 0.5s;
 }
-
 article:hover:before{color: red; width: 0px;}
 
 article .item{
-    width: 170px; height: 460px;
-    display: flex; z-index: 1;
+    width: 170px;
+    color: white;
+    z-index: 1;
+}
+article .item .itemNum{
+    margin: 20px 0px;
+    font-size: 30px;
+    line-height: 10px;
 }
 
-article .item .uitem{z-index: 1;}
-article .item .uitem .itemNum{font-size: 40px; line-height: 20px;}
-article .item .uitem>div{margin-bottom: 40px; color: white;}
-
-
-.item .ditem{
+article a{
+    display: block;
+    z-index: 1;
+}
+article a img{
+    display: block;
     width: 170px; height: 95px;
-    background-size: contain;
-    position: absolute; align-self: flex-end;
-    transition-duration: 0.5s; z-index: 1;
+    transition-duration: 0.5s;
 }
-
-article:hover .ditem{width: 200px; height: 111.76px;}
+article:hover img{width: 200px; height: 111.76px;}
