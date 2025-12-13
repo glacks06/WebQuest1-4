@@ -1,0 +1,50 @@
+
+// -- Contents --
+$contents-w: 1280px;
+$contents-h: 720px;
+$contents-ver-margin: 50px;
+
+// -- Title --
+
+// Title-Up
+$title-w: 280px;
+$title-border: 2px solid white;
+$title-color: rgb(84, 54, 54);
+$title-font-style: italic;
+$title-font-size: 30pt;
+$title-line-height: 30pt;
+$title-font: 'Times New Roman';
+
+// Title-Down
+$title-down-padding-bottom: 20px;
+$title-down-line-height: 16pt;
+$title-down-font-size: 10pt;
+$title-down-font: 'Verdana';
+
+// -- Contents Box --
+$contents-box-w: 1000px;
+$contents-box-h: 720px;
+
+// -- Nav --
+$nav-h: 120px;
+$nav-border: 2px solid white;
+$nav-mail-img-size: 30px;
+$nav-pos-right: 10px;
+$nav-pos-bottom: 10px;
+
+// -- Section --
+$section-h: 600px;
+$article-w: 260px;
+$article-padding: 70px 40px;
+
+$article-no-focus-opacity: 0.4;
+$article-focus-opacity: 1;
+$article-opacity-duration: 1s;
+
+$article-before-w: $article-w;
+$article-before-h: $section-h;
+$article-before-move-duration: 0.5s;
+
+$article-textNum-ver-margin: 20px;
+$article-textNum-font-size: 30px;
+$article-textNum-line-height: 10px;

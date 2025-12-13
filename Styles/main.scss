@@ -1,25 +1,23 @@
 @use './modules/reset' as reset;
-@use './constants/' as cons;
+@use './constants' as cons;
 
 *{
     @include reset.reset-styles;
 }
 
 #contents{
-    width: 1280px; height: 720px;
-    margin: 50px auto;
-    background-color: rgb(50, 50, 50);
-    color: white;
+    width: cons.$page-main-contents-w; height: cons.$page-main-contents-h;
+    margin: cons.$page-main-contents-ver-margin auto;
+    background-color: cons.$theme-color;
     display: flex;
 }
 
 /* Title */
-
 .titleBox{
-    width: 280px; 
-    border-right: 2px solid white;
+    width: cons.$page-main-title-w;
+    border-right: cons.$page-main-title-border;
     display: flex; flex-direction: column;
-    background-color: rgb(84, 54, 54);
+    background-color: cons.$page-main-title-color;
 
     .titles{
         flex-grow: 1;
@@ -30,82 +28,84 @@
     .titleUp{
         align-items: center;
         p{
-            font-style: italic;
-            font-size: 30pt;
-            line-height: 50px;
-            font-family: 'Times New Roman';
+            font-style: cons.$page-main-title-font-style;
+            font-size: cons.$page-main-title-font-size;
+            line-height: cons.$page-main-title-line-height;
+            font-family: cons.$page-main-title-font;
         }
     }
 
     .titleDown{
-        padding-bottom: 20px;
+        padding-bottom: cons.$page-main-title-down-padding-bottom;
         align-items: flex-end;
         p{
             text-align: center;
-            line-height: 16pt;
-            font-size: 10px; 
-            font-family: Verdana; 
+            line-height: cons.$page-main-title-down-line-height;
+            font-size: cons.$page-main-title-down-font-size; 
+            font-family: cons.$page-main-title-down-font; 
         }
     }
 }
 
 
 
-/* contents box 영역 */
+/* -- contents box 영역 -- */
 .contents_box{
-    width: 1000px; height: 720px;
+    width: cons.$page-main-contents-box-w; height: cons.$page-main-contents-box-h;
     display: flex; 
     flex-direction: column;
+}
 
-    /* navigation 영역 */
-    nav{
-        width: 100%; height: 120px;
-        border-bottom: 2px solid white;
-        position: relative;
-        .mail_img{
-            display: block;
-            width: 30px; height: 30px;
-            position: absolute;
-            right: 10px; bottom: 10px;
-        }
+/* navigation 영역 */
+nav{
+    height: cons.$page-main-nav-h;
+    border-bottom: cons.$page-main-nav-border;
+    position: relative;
+    .mail_img{
+        display: block;
+        width: cons.$page-main-nav-mail-img-size; height: cons.$page-main-nav-mail-img-size;
+        position: absolute;
+        right: cons.$page-main-nav-pos-right;
+        bottom: cons.$page-main-nav-pos-bottom;
     }
 }
 
 
 /* section 영역 */
 section{
-    width: 100%; height: 600px;
+    height: cons.$page-main-section-h;
     display: flex;
 }
 article{
-    width: 260px;
+    width: cons.$page-main-article-w;
     flex-grow: 1;
-    padding: 70px 40px;
+    padding: cons.$page-main-article-padding;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    opacity: 0.4;
+    opacity: cons.$page-main-article-no-focus-opacity;
     position: relative;
     background-image: url('../../Images/back.png');
     
-    transition-duration: 1s;
+    transition-duration: cons.$page-main-article-opacity-duration;
 
-    &:hover{opacity: 1;}
+    &:hover{opacity: cons.$page-main-article-focus-opacity;}
     &::before{
         content: "";
         display: block;
-        width: 250px; height: 600px;
+        width: cons.$page-main-article-w;
+        height: cons.$page-main-article-before-h;
         z-index: -1;
         position: absolute; top: 0px; right: 0px;
-        background-color: rgb(50, 50, 50);
-        transition-duration: 0.5s;
+        background-color: cons.$theme-color;
+        transition-duration: cons.$page-main-article-before-move-duration;
     }
-    &:hover::before{transform: translateX(260px);}
+    &:hover::before{transform: translateX(cons.$page-main-article-before-w);}
 
     .text{
         .textNum{
-            margin: 20px 0px;
+            margin: cons.$page- 0px;
             font-size: 30px;
             line-height: 10px;
         }
