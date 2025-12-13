@@ -1,0 +1,28 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 875px;
+  margin: 50px auto;
+  justify-content: center;
+  gap: 10px;
+}
+main img {
+  display: block;
+  width: 105px;
+  height: 95px;
+  border-radius: 10px;
+  transform: skewX(-10deg);
+  transition-duration: 1s;
+  background-color: lightgray;
+}
+main img:hover {
+  transform: skewX(-10deg) scale(1.5, 1.5);
+  z-index: 1;
+  background-color: pink;
+}/*# sourceMappingURL=second.css.map */
