@@ -1,6 +1,6 @@
 @use '../constants/base/theme' as theme-cons;
 
-@mixin reset-styles{
+@mixin set-styles{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
