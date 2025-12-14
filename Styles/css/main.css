@@ -80,7 +80,7 @@ section {
 }
 
 article {
-  width: 260px;
+  width: 250px;
   height: auto;
   flex-grow: 1;
   padding: 70px 40px;
@@ -99,7 +99,7 @@ article:hover {
 article::before {
   content: "";
   display: block;
-  width: 260px;
+  width: 250px;
   height: 600px;
   z-index: -1;
   position: absolute;
@@ -109,7 +109,7 @@ article::before {
   transition-duration: 0.5s;
 }
 article:hover::before {
-  transform: translateX(260px);
+  transform: translateX(250px);
 }
 article .text .textNum {
   margin: 20px 0px;
@@ -123,10 +123,10 @@ article a {
 article a img {
   display: block;
   width: 170px;
-  height: 95px;
+  height: auto;
   transition-duration: 0.5s;
 }
 article:hover img {
   width: 200px;
-  height: 111.7647058824px;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */

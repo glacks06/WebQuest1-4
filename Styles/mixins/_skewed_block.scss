@@ -1,3 +1,5 @@
+// hero page's skew block style
+
 @mixin make-skew-block($w: 105px, $h: 95px, $color: lightgray, $skewDeg: -10deg, $radius: 10px, $scale){
     display: block;
     width: $w; height: $h;

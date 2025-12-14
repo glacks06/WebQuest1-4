@@ -1,8 +1,9 @@
-@use '../constants/base/theme' as theme-cons;
+@use '../constants' as cons;
 
+// style reset mixin
 @mixin set-styles{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: theme-cons.$font-color;
+    color: cons.$theme-font-color;
 }

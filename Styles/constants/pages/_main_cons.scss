@@ -1,31 +1,31 @@
 @use 'sass:math';
-@use '../base/theme' as theme;
+@use '../themes/theme' as theme;
 
-// -- Contents --
+// -- Base --
 $contents-w: 1280px;
 $contents-h: 720px;
 $contents-ver-margin: 50px;
 
 // -- Title --
-// Title-Up
+// title-Up
 $title-w: 280px;
 $title-h: auto;
 $title-border: theme.$border;
-$title-color: rgb(84, 54, 54);
+$title-color: theme.$title-color;
 $title-font-style: italic;
 $title-font-size: 30pt;
 $title-line-height: 30pt;
-$title-font: 'Times New Roman';
+$title-font: theme.$title-font;
 
-// Title-Down
+// title-Down
 $title-down-padding-bottom: 20px;
 $title-down-line-height: 16pt;
 $title-down-font-size: 10pt;
-$title-down-font: 'Verdana';
+$title-down-font: theme.$title-down-font;
 
 // -- Contents Box --
-$contents-box-w: 1000px;
-$contents-box-h: 720px;
+$contents-box-w: $contents-w - $title-w;
+$contents-box-h: $contents-h;
 
 // -- Nav --
 $nav-w: auto;
@@ -37,12 +37,16 @@ $nav-pos-bottom: 10px;
 
 // -- Section --
 $section-w: auto;
-$section-h: 600px;
+$section-h: $contents-box-h - $nav-h;
 
 // article
-$article-w: 260px;
+$article-cnt: 4; // article 개수
+$article-w: math.div($contents-box-w, $article-cnt);
 $article-h: auto;
-$article-padding: 70px 40px;
+
+$article-padding-ver: 70px;
+$article-padding-hor: 40px;
+$article-padding: $article-padding-ver $article-padding-hor;
 
 $article-no-focus-opacity: 0.4;
 $article-focus-opacity: 1;
@@ -60,10 +64,10 @@ $article-textNum-font-size: 30px;
 $article-textNum-line-height: 10px;
 
 // article images
-$article-img-w: 170px;
-$article-img-h: 95px;
+$article-img-w: $article-w - (2*$article-padding-hor); // 이미지 사이즈를 article 내부 컨텐츠 영역에 맞도록 계산
+$article-img-h: auto;
 $article-img-duration: 0.5s;
 
 // article images hover event
 $article-img-hover-w: 200px;
-$article-img-hover-h: math.div($article-img-hover-w, $article-img-w) * $article-img-h;
+$article-img-hover-h: auto;

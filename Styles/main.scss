@@ -119,9 +119,13 @@ article{
         z-index: 1;
         img{
             display: block;
-            width: cons.$page-main-article-img-w; height: cons.$page-main-article-img-h;
+            width: cons.$page-main-article-img-w;
+            height: cons.$page-main-article-img-h;
             transition-duration: cons.$page-main-article-img-duration;
         }
     }
-    &:hover img{width: cons.$page-main-article-img-hover-w; height: cons.$page-main-article-img-hover-h;}
+    &:hover img{
+        width: cons.$page-main-article-img-hover-w;
+        height: cons.$page-main-article-img-hover-h;
+    }
 } 
