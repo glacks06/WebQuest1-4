@@ -1,4 +1,4 @@
-@use './modules/reset' as reset;
+@use './mixins/reset' as reset;
 @use './constants' as cons;
 
 *{
@@ -15,6 +15,7 @@
 /* Title */
 .titleBox{
     width: cons.$page-main-title-w;
+    height: cons.$page-main-title-h;
     border-right: cons.$page-main-title-border;
     display: flex; flex-direction: column;
     background-color: cons.$page-main-title-color;
@@ -58,6 +59,7 @@
 
 /* navigation 영역 */
 nav{
+    width: cons.$page-main-nav-w;
     height: cons.$page-main-nav-h;
     border-bottom: cons.$page-main-nav-border;
     position: relative;
@@ -73,11 +75,13 @@ nav{
 
 /* section 영역 */
 section{
+    width: cons.$page-main-section-w;
     height: cons.$page-main-section-h;
     display: flex;
 }
 article{
     width: cons.$page-main-article-w;
+    height: cons.$page-main-article-h;
     flex-grow: 1;
     padding: cons.$page-main-article-padding;
     overflow: hidden;
@@ -86,7 +90,7 @@ article{
     justify-content: space-between;
     opacity: cons.$page-main-article-no-focus-opacity;
     position: relative;
-    background-image: url('../../Images/back.png');
+    background-image: url(cons.$page-main-article-before-img-path);
     
     transition-duration: cons.$page-main-article-opacity-duration;
 
@@ -105,9 +109,9 @@ article{
 
     .text{
         .textNum{
-            margin: cons.$page- 0px;
-            font-size: 30px;
-            line-height: 10px;
+            margin: cons.$page-main-article-textNum-ver-margin 0px;
+            font-size: cons.$page-main-article-textNum-font-size;
+            line-height: cons.$page-main-article-textNum-line-height;
         }
     }
     a{
@@ -115,9 +119,9 @@ article{
         z-index: 1;
         img{
             display: block;
-            width: 170px; height: 95px;
-            transition-duration: 0.5s;
+            width: cons.$page-main-article-img-w; height: cons.$page-main-article-img-h;
+            transition-duration: cons.$page-main-article-img-duration;
         }
     }
-    &:hover img{width: 200px; height: 111.76px;}
+    &:hover img{width: cons.$page-main-article-img-hover-w; height: cons.$page-main-article-img-hover-h;}
 } 

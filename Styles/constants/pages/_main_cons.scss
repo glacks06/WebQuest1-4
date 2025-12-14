@@ -1,3 +1,5 @@
+@use 'sass:math';
+@use '../base/theme' as theme;
 
 // -- Contents --
 $contents-w: 1280px;
@@ -5,10 +7,10 @@ $contents-h: 720px;
 $contents-ver-margin: 50px;
 
 // -- Title --
-
 // Title-Up
 $title-w: 280px;
-$title-border: 2px solid white;
+$title-h: auto;
+$title-border: theme.$border;
 $title-color: rgb(84, 54, 54);
 $title-font-style: italic;
 $title-font-size: 30pt;
@@ -26,25 +28,42 @@ $contents-box-w: 1000px;
 $contents-box-h: 720px;
 
 // -- Nav --
+$nav-w: auto;
 $nav-h: 120px;
-$nav-border: 2px solid white;
+$nav-border: theme.$border;
 $nav-mail-img-size: 30px;
 $nav-pos-right: 10px;
 $nav-pos-bottom: 10px;
 
 // -- Section --
+$section-w: auto;
 $section-h: 600px;
+
+// article
 $article-w: 260px;
+$article-h: auto;
 $article-padding: 70px 40px;
 
 $article-no-focus-opacity: 0.4;
 $article-focus-opacity: 1;
 $article-opacity-duration: 1s;
 
+// article background elements
+$article-before-img-path: '../../Images/back.png';
 $article-before-w: $article-w;
 $article-before-h: $section-h;
 $article-before-move-duration: 0.5s;
 
+// article top text
 $article-textNum-ver-margin: 20px;
 $article-textNum-font-size: 30px;
 $article-textNum-line-height: 10px;
+
+// article images
+$article-img-w: 170px;
+$article-img-h: 95px;
+$article-img-duration: 0.5s;
+
+// article images hover event
+$article-img-hover-w: 200px;
+$article-img-hover-h: math.div($article-img-hover-w, $article-img-w) * $article-img-h;

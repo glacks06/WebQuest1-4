@@ -17,6 +17,7 @@
 /* Title */
 .titleBox {
   width: 280px;
+  height: auto;
   border-right: 2px solid white;
   display: flex;
   flex-direction: column;
@@ -57,6 +58,7 @@
 
 /* navigation 영역 */
 nav {
+  width: auto;
   height: 120px;
   border-bottom: 2px solid white;
   position: relative;
@@ -72,12 +74,14 @@ nav .mail_img {
 
 /* section 영역 */
 section {
+  width: auto;
   height: 600px;
   display: flex;
 }
 
 article {
   width: 260px;
+  height: auto;
   flex-grow: 1;
   padding: 70px 40px;
   overflow: hidden;
@@ -124,5 +128,5 @@ article a img {
 }
 article:hover img {
   width: 200px;
-  height: 111.76px;
+  height: 111.7647058824px;
 }/*# sourceMappingURL=main.css.map */
