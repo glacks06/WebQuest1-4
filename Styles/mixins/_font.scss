@@ -1,0 +1,8 @@
+// 폰트 스타일 지정 mixin
+
+@mixin set-text-styles($size: 30pt, $line-h: 50px, $family: none, $style: none){
+    font-style: $style;
+    font-size: $size;
+    line-height: $line-h;
+    font-family: $family;
+}

@@ -29,10 +29,12 @@
     .titleUp{
         align-items: center;
         p{
-            font-style: cons.$page-main-title-font-style;
-            font-size: cons.$page-main-title-font-size;
-            line-height: cons.$page-main-title-line-height;
-            font-family: cons.$page-main-title-font;
+            @include mixins.font-set-text-sytles(
+                cons.$page-main-title-font-size,
+                cons.$page-main-title-line-height,
+                cons.$page-main-title-font,
+                cons.$page-main-title-font-style
+            );
         }
     }
 
@@ -41,9 +43,11 @@
         align-items: flex-end;
         p{
             text-align: center;
-            line-height: cons.$page-main-title-down-line-height;
-            font-size: cons.$page-main-title-down-font-size; 
-            font-family: cons.$page-main-title-down-font; 
+            @include mixins.font-set-text-styles(
+                cons.$page-main-title-down-font-size,
+                cons.$page-main-title-down-line-height,
+                cons.$page-main-title-down-font
+            );
         }
     }
 }
