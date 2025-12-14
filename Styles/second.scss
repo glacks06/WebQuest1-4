@@ -1,25 +1,30 @@
+@use './mixins/reset' as reset;
+@use './constants' as cons;
+
 *{
-    margin: 0px; padding: 0px;
-    box-sizing: border-box;
+    @include reset.reset-styles;
 }
 main{
     display: flex;
     flex-wrap: wrap;
-    width: 875px; margin: 50px auto;
+    width: cons.$page-second-base-w; 
+    height: cons.$page-second-base-h;
+    margin: cons.$page-second-base-ver-margin auto;
     justify-content: center;
-    gap: 10px;
+    gap: cons.$page-second-base-gap;
 
     img{
         display: block;
-        width: 105px; height: 95px;
-        border-radius: 10px;
-        transform: skewX(-10deg);
-        transition-duration: 1s;
-        background-color: lightgray;
+        width: cons.$page-second-base-img-w; 
+        height: cons.$page-second-base-img-h;
+        border-radius: cons.$page-second-base-img-border-radius;
+        transform: skewX(cons.$page-second-base-img-skew-x);
+        transition-duration: cons.$page-second-base-img-duration;
+        background-color: cons.$theme-hero-background-color;
         &:hover{
-            transform: skewX(-10deg) scale(1.5, 1.5);
+            transform: skewX(cons.$page-second-base-img-skew-x) scale(1.5, 1.5);
             z-index: 1;
-            background-color: pink;
+            background-color: cons.$theme-hero-background-color-hover;
         }
     }
 }
