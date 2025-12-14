@@ -29,7 +29,7 @@
     .titleUp{
         align-items: center;
         p{
-            @include mixins.font-set-text-sytles(
+            @include mixins.font-set-text-styles(
                 cons.$page-main-title-font-size,
                 cons.$page-main-title-line-height,
                 cons.$page-main-title-font,
@@ -84,20 +84,16 @@ section{
     display: flex;
 }
 article{
-    width: cons.$page-main-article-w;
-    height: cons.$page-main-article-h;
-    flex-grow: 1;
-    padding: cons.$page-main-article-padding;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    opacity: cons.$page-main-article-no-focus-opacity;
-    position: relative;
-    background-image: url(cons.$page-main-article-before-img-path);
-    
-    transition-duration: cons.$page-main-article-opacity-duration;
+    @include mixins.article-set-style(
+        cons.$page-main-article-w,
+        cons.$page-main-article-h,
+        cons.$page-main-article-padding,
+        cons.$page-main-article-opacity-duration,
+        cons.$page-main-article-before-img-path
+    );
 
+    opacity: cons.$page-main-article-no-focus-opacity;
+    
     &:hover{opacity: cons.$page-main-article-focus-opacity;}
     &::before{
         content: "";

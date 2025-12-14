@@ -43,8 +43,9 @@
 }
 .titleBox .titleDown p {
   text-align: center;
-  line-height: 16pt;
+  font-style: none;
   font-size: 10pt;
+  line-height: 16pt;
   font-family: "Verdana";
 }
 
@@ -82,16 +83,16 @@ section {
 article {
   width: 250px;
   height: auto;
-  flex-grow: 1;
   padding: 70px 40px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  opacity: 0.4;
+  flex-grow: 1;
   position: relative;
-  background-image: url("../../Images/back.png");
   transition-duration: 1s;
+  background-image: url("../../Images/back.png");
+  opacity: 0.4;
 }
 article:hover {
   opacity: 1;
