@@ -15,12 +15,10 @@ main{
 
     div{
         overflow: hidden;
-        position: relative;
         img{ // 이미지 왜곡을 없애기 위해 반대방향으로 skew
             @include mixins.skew-make-skew-block(
-                100%, auto, none,
-                (-1*cons.$page-second-base-img-skew-x),
-                none,
+                $w: 100%,
+                $skewDeg: (-1*cons.$page-second-base-img-skew-x)
             );
         }
         
