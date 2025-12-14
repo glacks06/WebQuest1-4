@@ -1,8 +1,8 @@
-@use './mixins/reset' as reset;
+@use './mixins' as mixins;
 @use './constants' as cons;
 
 *{
-    @include reset.reset-styles;
+    @include mixins.reset-set-styles;
 }
 
 #contents{

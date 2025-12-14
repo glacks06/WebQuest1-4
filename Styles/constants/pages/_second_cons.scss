@@ -7,7 +7,12 @@ $base-gap: 10px;
 
 $base-img-w: 105px;
 $base-img-h: 95px;
+$base-img-background-color: theme.$hero-background-color;
+$base-img-background-color-hover: theme.$hero-background-color-hover;
 $base-img-border-radius: 10px;
 $base-img-skew-x: -10deg;
+$base-img-scale: 1;
+$base-img-scale-hover: 1.5;
+
 
 $base-img-duration: 1s;

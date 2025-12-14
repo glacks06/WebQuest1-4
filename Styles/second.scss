@@ -1,8 +1,8 @@
-@use './mixins/reset' as reset;
+@use './mixins' as mixins;
 @use './constants' as cons;
 
 *{
-    @include reset.reset-styles;
+    @include mixins.reset-set-styles;
 }
 main{
     display: flex;
@@ -14,15 +14,25 @@ main{
     gap: cons.$page-second-base-gap;
 
     img{
-        display: block;
-        width: cons.$page-second-base-img-w; 
-        height: cons.$page-second-base-img-h;
-        border-radius: cons.$page-second-base-img-border-radius;
-        transform: skewX(cons.$page-second-base-img-skew-x);
+        @include mixins.skew-make-skew-block(
+            cons.$page-second-base-img-w,
+            cons.$page-second-base-img-h,
+            cons.$page-second-base-img-background-color,
+            cons.$page-second-base-img-skew-x,
+            cons.$page-second-base-img-border-radius,
+            cons.$page-second-base-img-scale
+        );
         transition-duration: cons.$page-second-base-img-duration;
         background-color: cons.$theme-hero-background-color;
         &:hover{
-            transform: skewX(cons.$page-second-base-img-skew-x) scale(1.5, 1.5);
+            @include mixins.skew-make-skew-block(
+                cons.$page-second-base-img-w,
+                cons.$page-second-base-img-h,
+                cons.$page-second-base-img-background-color-hover,
+                cons.$page-second-base-img-skew-x,
+                cons.$page-second-base-img-border-radius,
+                cons.$page-second-base-img-scale-hover
+            );
             z-index: 1;
             background-color: cons.$theme-hero-background-color-hover;
         }
