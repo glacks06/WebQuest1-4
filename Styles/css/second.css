@@ -14,7 +14,9 @@ main {
   justify-content: center;
   gap: 10px;
 }
-main img {
+main div {
+  overflow: hidden;
+  position: relative;
   display: block;
   width: 105px;
   height: 95px;
@@ -24,7 +26,15 @@ main img {
   transition-duration: 1s;
   background-color: lightgray;
 }
-main img:hover {
+main div img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: skewX(10deg) scale(1, 1);
+  border-radius: none;
+  background-color: none;
+}
+main div:hover {
   display: block;
   width: 105px;
   height: 95px;

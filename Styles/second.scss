@@ -13,7 +13,17 @@ main{
     justify-content: center;
     gap: cons.$page-second-base-gap;
 
-    img{
+    div{
+        overflow: hidden;
+        position: relative;
+        img{ // 이미지 왜곡을 없애기 위해 반대방향으로 skew
+            @include mixins.skew-make-skew-block(
+                100%, auto, none,
+                (-1*cons.$page-second-base-img-skew-x),
+                none,
+            );
+        }
+        
         @include mixins.skew-make-skew-block(
             cons.$page-second-base-img-w,
             cons.$page-second-base-img-h,
