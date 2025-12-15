@@ -1,0 +1,5 @@
+@use 'sass:math';
+
+@function size-cal-hight($originW, $originH, $newW: null){
+    @return (math.div($newW, $originW) * $originH);
+}
