@@ -23,7 +23,6 @@ main div {
   border-radius: 10px;
   background-color: lightgray;
   transition-duration: 1s;
-  background-color: lightgray;
 }
 main div img {
   display: block;
@@ -41,5 +40,4 @@ main div:hover {
   border-radius: 10px;
   background-color: pink;
   z-index: 1;
-  background-color: pink;
 }/*# sourceMappingURL=second.css.map */

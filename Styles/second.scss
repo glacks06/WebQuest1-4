@@ -31,7 +31,7 @@ main{
             cons.$page-second-base-img-scale
         );
         transition-duration: cons.$page-second-base-img-duration;
-        background-color: cons.$theme-hero-background-color;
+        
         &:hover{
             @include mixins.skew-make-skew-block(
                 cons.$page-second-base-img-w,
@@ -42,7 +42,6 @@ main{
                 cons.$page-second-base-img-scale-hover
             );
             z-index: 1;
-            background-color: cons.$theme-hero-background-color-hover;
         }
     }
 }
