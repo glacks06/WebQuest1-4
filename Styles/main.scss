@@ -31,12 +31,7 @@
     .titleUp{
         align-items: center;
         p{
-            @include mixins.font-set-text-styles(
-                cons.$page-main-title-font-size,
-                cons.$page-main-title-line-height,
-                cons.$page-main-title-font,
-                cons.$page-main-title-font-style
-            );
+            @include mixins.font-set-text-styles(cons.$page-main-title-font);
         }
     }
 
@@ -45,11 +40,7 @@
         align-items: flex-end;
         p{
             text-align: center;
-            @include mixins.font-set-text-styles(
-                cons.$page-main-title-down-font-size,
-                cons.$page-main-title-down-line-height,
-                cons.$page-main-title-down-font
-            );
+            @include mixins.font-set-text-styles(cons.$page-main-title-down-font);
         }
     }
 }
@@ -113,8 +104,7 @@ article{
     .text{
         .textNum{
             margin: cons.$page-main-article-textNum-ver-margin 0px;
-            font-size: cons.$page-main-article-textNum-font-size;
-            line-height: cons.$page-main-article-textNum-line-height;
+            @include mixins.font-set-text-styles(cons.$page-main-article-textNum-font);
         }
         .textNum + p{ margin-bottom: cons.$page-main-article-title-margin-bottom; font-weight: bold;}
     }

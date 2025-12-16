@@ -8,21 +8,26 @@ $contents-h: 720px;
 $contents-ver-margin: 50px;
 
 // -- Title --
-// title-Up
 $title-w: 280px;
 $title-h: auto;
 $title-border: theme.$border;
 $title-color: theme.$title-color;
-$title-font-style: italic;
-$title-font-size: 30pt;
-$title-line-height: 30pt;
-$title-font: theme.$title-font;
+
+// title-Up
+$title-font: (
+    "style": italic,
+    "size": 30pt,
+    "line-height": 30pt,
+    "font-family": theme.$title-font
+);
 
 // title-Down
+$title-down-font: (
+    "size": 10pt,
+    "line-height": 16pt,
+    "font-family": theme.$title-down-font
+);
 $title-down-padding-bottom: 20px;
-$title-down-line-height: 16pt;
-$title-down-font-size: 10pt;
-$title-down-font: theme.$title-down-font;
 
 // -- Contents Box --
 $contents-box-w: $contents-w - $title-w;
@@ -41,7 +46,7 @@ $section-w: auto;
 $section-h: $contents-box-h - $nav-h;
 
 // article
-$article-cnt: 4; // article 개수
+$article-cnt: 4; // article 갯수
 $article-w: math.div($contents-box-w, $article-cnt);
 $article-h: auto;
 
@@ -62,9 +67,12 @@ $article-before-move-duration: 0.5s;
 
 // article top text
 $article-textNum-ver-margin: 20px;
-$article-textNum-font-size: 30px;
-$article-textNum-line-height: 10px;
 $article-title-margin-bottom: 15px;
+$article-textNum-font: (
+    "size": 30px,
+    "line-height": 10px
+);
+
 
 // article images (너비 지정 시 높이는 비율에 맞게 자동으로 계산됨)
 $article-img-w: $article-w - (2*$article-padding-hor); // 이미지 사이즈를 article 내부 컨텐츠 영역에 맞도록 계산
