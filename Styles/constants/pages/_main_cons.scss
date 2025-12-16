@@ -1,5 +1,6 @@
 @use 'sass:math';
 @use '../themes/theme' as theme;
+@use '../../../Functions' as funcs;
 
 // -- Base --
 $contents-w: 1280px;
@@ -52,8 +53,9 @@ $article-no-focus-opacity: 0.4;
 $article-focus-opacity: 1;
 $article-opacity-duration: 1s;
 
+$article-img-path: '../../Images/back.png';
+
 // article background elements
-$article-before-img-path: '../../Images/back.png';
 $article-before-w: $article-w;
 $article-before-h: $section-h;
 $article-before-move-duration: 0.5s;
@@ -62,12 +64,13 @@ $article-before-move-duration: 0.5s;
 $article-textNum-ver-margin: 20px;
 $article-textNum-font-size: 30px;
 $article-textNum-line-height: 10px;
+$article-title-margin-bottom: 15px;
 
-// article images
+// article images (너비 지정 시 높이는 비율에 맞게 자동으로 계산됨)
 $article-img-w: $article-w - (2*$article-padding-hor); // 이미지 사이즈를 article 내부 컨텐츠 영역에 맞도록 계산
-$article-img-h: auto;
+// $article-img-h: funcs.imgFunc-size-cal-hight(1374, 773, $article-img-w);
 $article-img-duration: 0.5s;
 
 // article images hover event
 $article-img-hover-w: 200px;
-$article-img-hover-h: auto;
+// $article-img-hover-h: funcs.imgFunc-size-cal-hight(1374, 773, 200px);

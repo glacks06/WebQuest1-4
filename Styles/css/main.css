@@ -117,17 +117,55 @@ article .text .textNum {
   font-size: 30px;
   line-height: 10px;
 }
-article a {
-  display: block;
-  z-index: 1;
+article .text .textNum + p {
+  margin-bottom: 15px;
+  font-weight: bold;
 }
-article a img {
-  display: block;
+article .img1 {
   width: 170px;
-  height: auto;
+  height: 95.6404657933px;
+  display: block;
+  background-image: url("/Images/img1.png");
+  background-size: cover;
   transition-duration: 0.5s;
 }
-article:hover img {
+article:hover .img1 {
   width: 200px;
-  height: auto;
+  height: 112.5181950509px;
+}
+article .img2 {
+  width: 170px;
+  height: 95.6404657933px;
+  display: block;
+  background-image: url("/Images/img2.png");
+  background-size: cover;
+  transition-duration: 0.5s;
+}
+article:hover .img2 {
+  width: 200px;
+  height: 112.5181950509px;
+}
+article .img3 {
+  width: 170px;
+  height: 95.6404657933px;
+  display: block;
+  background-image: url("/Images/img3.png");
+  background-size: cover;
+  transition-duration: 0.5s;
+}
+article:hover .img3 {
+  width: 200px;
+  height: 112.5181950509px;
+}
+article .img4 {
+  width: 170px;
+  height: 95.6404657933px;
+  display: block;
+  background-image: url("/Images/img4.png");
+  background-size: cover;
+  transition-duration: 0.5s;
+}
+article:hover .img4 {
+  width: 200px;
+  height: 112.5181950509px;
 }/*# sourceMappingURL=main.css.map */

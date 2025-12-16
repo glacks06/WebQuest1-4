@@ -1,5 +1,7 @@
 @use './mixins' as mixins;
 @use './constants' as cons;
+@use '../Datas' as datas;
+@use '../Functions/' as funcs;
 
 *{
     @include mixins.reset-set-styles;
@@ -89,12 +91,12 @@ article{
         cons.$page-main-article-h,
         cons.$page-main-article-padding,
         cons.$page-main-article-opacity-duration,
-        cons.$page-main-article-before-img-path
+        cons.$page-main-article-img-path
     );
-
     opacity: cons.$page-main-article-no-focus-opacity;
-    
     &:hover{opacity: cons.$page-main-article-focus-opacity;}
+
+    // article background element (hover -> slide)
     &::before{
         content: "";
         display: block;
@@ -107,25 +109,34 @@ article{
     }
     &:hover::before{transform: translateX(cons.$page-main-article-before-w);}
 
+    // article texts
     .text{
         .textNum{
             margin: cons.$page-main-article-textNum-ver-margin 0px;
             font-size: cons.$page-main-article-textNum-font-size;
             line-height: cons.$page-main-article-textNum-line-height;
         }
+        .textNum + p{ margin-bottom: cons.$page-main-article-title-margin-bottom; font-weight: bold;}
     }
-    a{
-        display: block;
-        z-index: 1;
-        img{
-            display: block;
+    
+    // article images
+    @each $key, $v in datas.$img-main{
+        $path: map-get($v, path);
+        $size: map-get($v, size);
+
+        .#{$key}{
             width: cons.$page-main-article-img-w;
-            height: cons.$page-main-article-img-h;
+            height: funcs.imgFunc-size-cal-hight(nth($size, 1), nth($size, 2), cons.$page-main-article-img-w); // 가로 사이즈에 맞게 세로 사이즈 계산
+            display: block;
+
+            background-image: url($path);
+            background-size: cover;
             transition-duration: cons.$page-main-article-img-duration;
         }
+        &:hover .#{$key}{
+            width: cons.$page-main-article-img-hover-w;
+            height: funcs.imgFunc-size-cal-hight(nth($size, 1), nth($size, 2), cons.$page-main-article-img-hover-w); // 가로 사이즈에 맞게 세로 사이즈 계산
+        }
     }
-    &:hover img{
-        width: cons.$page-main-article-img-hover-w;
-        height: cons.$page-main-article-img-hover-h;
-    }
+
 } 
