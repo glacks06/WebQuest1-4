@@ -48,7 +48,8 @@ $section-h: $contents-box-h - $nav-h;
 // article
 $article-cnt: 4; // article 갯수
 $article-w: math.div($contents-box-w, $article-cnt);
-$article-h: auto;
+// $article-h: auto;
+$article-h: 100%;
 
 $article-padding-ver: 70px;
 $article-padding-hor: 40px;
@@ -58,11 +59,7 @@ $article-no-focus-opacity: 0.4;
 $article-focus-opacity: 1;
 $article-opacity-duration: 1s;
 
-$article-img-path: '/Images/back.png';
-
 // article background elements
-$article-before-w: $article-w;
-$article-before-h: $section-h;
 $article-before-move-duration: 0.5s;
 
 // article top text

@@ -81,7 +81,7 @@ section {
 
 article {
   width: 250px;
-  height: auto;
+  height: 100%;
   padding: 70px 40px;
   overflow: hidden;
   display: flex;
@@ -100,7 +100,7 @@ article::before {
   content: "";
   display: block;
   width: 250px;
-  height: 600px;
+  height: 100%;
   z-index: -1;
   position: absolute;
   top: 0px;
@@ -121,9 +121,9 @@ article .text .textNum + p {
   font-weight: bold;
 }
 article .img1 {
+  display: block;
   width: 170px;
   height: 95.6404657933px;
-  display: block;
   background-image: url("/Images/img1.png");
   background-size: cover;
   transition-duration: 0.5s;
@@ -133,9 +133,9 @@ article:hover .img1 {
   height: 112.5181950509px;
 }
 article .img2 {
+  display: block;
   width: 170px;
   height: 95.6404657933px;
-  display: block;
   background-image: url("/Images/img2.png");
   background-size: cover;
   transition-duration: 0.5s;
@@ -145,9 +145,9 @@ article:hover .img2 {
   height: 112.5181950509px;
 }
 article .img3 {
+  display: block;
   width: 170px;
   height: 95.6404657933px;
-  display: block;
   background-image: url("/Images/img3.png");
   background-size: cover;
   transition-duration: 0.5s;
@@ -157,9 +157,9 @@ article:hover .img3 {
   height: 112.5181950509px;
 }
 article .img4 {
+  display: block;
   width: 170px;
   height: 95.6404657933px;
-  display: block;
   background-image: url("/Images/img4.png");
   background-size: cover;
   transition-duration: 0.5s;

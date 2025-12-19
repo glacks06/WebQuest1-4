@@ -3,9 +3,7 @@
 @use '../Datas' as datas;
 @use '../Functions/' as funcs;
 
-*{
-    @include mixins.reset-set-styles;
-}
+* {@include mixins.reset-set-styles;}
 
 #contents{
     width: cons.$page-main-contents-w; height: cons.$page-main-contents-h;
@@ -30,9 +28,7 @@
 
     .titleUp{
         align-items: center;
-        p{
-            @include mixins.font-set-text-styles(cons.$page-main-title-font);
-        }
+        p{@include mixins.font-set-text-styles(cons.$page-main-title-font);}
     }
 
     .titleDown{
@@ -44,8 +40,6 @@
         }
     }
 }
-
-
 
 /* -- contents box 영역 -- */
 .contents_box{
@@ -82,7 +76,7 @@ article{
         cons.$page-main-article-h,
         cons.$page-main-article-padding,
         cons.$page-main-article-opacity-duration,
-        cons.$page-main-article-img-path
+        datas.$img-article-background-img-path
     );
     opacity: cons.$page-main-article-no-focus-opacity;
     &:hover{opacity: cons.$page-main-article-focus-opacity;}
@@ -92,13 +86,13 @@ article{
         content: "";
         display: block;
         width: cons.$page-main-article-w;
-        height: cons.$page-main-article-before-h;
+        height: cons.$page-main-article-h;
         z-index: -1;
         position: absolute; top: 0px; right: 0px;
         background-color: cons.$theme-color;
         transition-duration: cons.$page-main-article-before-move-duration;
     }
-    &:hover::before{transform: translateX(cons.$page-main-article-before-w);}
+    &:hover::before{transform: translateX(cons.$page-main-article-w);}
 
     // article texts
     .text{
@@ -115,9 +109,9 @@ article{
         $size: map-get($v, size);
 
         .#{$key}{
+            display: block;
             width: cons.$page-main-article-img-w;
             height: funcs.imgFunc-size-cal-hight(nth($size, 1), nth($size, 2), cons.$page-main-article-img-w); // 가로 사이즈에 맞게 세로 사이즈 계산
-            display: block;
 
             background-image: url($path);
             background-size: cover;
