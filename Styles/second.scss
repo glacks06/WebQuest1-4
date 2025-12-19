@@ -1,9 +1,7 @@
 @use './mixins' as mixins;
 @use './constants' as cons;
 
-*{
-    @include mixins.reset-set-styles;
-}
+*{@include mixins.reset-set-styles;}
 main{
     display: flex;
     flex-wrap: wrap;
@@ -16,13 +14,13 @@ main{
     div{
         overflow: hidden;
         img{ // 이미지 왜곡을 없애기 위해 반대방향으로 skew
-            @include mixins.skew-make-skew-block(
+            @include mixins.skew-make-block(
                 $w: 100%,
                 $skewDeg: (-1*cons.$page-second-base-img-skew-x)
             );
         }
         
-        @include mixins.skew-make-skew-block(
+        @include mixins.skew-make-block(
             cons.$page-second-base-img-w,
             cons.$page-second-base-img-h,
             cons.$page-second-base-img-background-color,
@@ -33,7 +31,7 @@ main{
         transition-duration: cons.$page-second-base-img-duration;
         
         &:hover{
-            @include mixins.skew-make-skew-block(
+            @include mixins.skew-make-block(
                 $color: cons.$page-second-base-img-background-color-hover,
                 $skewDeg: cons.$page-second-base-img-skew-x,
                 $scale: cons.$page-second-base-img-scale-hover

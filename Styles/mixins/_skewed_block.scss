@@ -1,6 +1,6 @@
 // hero page's skew block style
 
-@mixin make-skew-block($w: none, $h: none, $color: none, $skewDeg: -10deg, $radius: none, $scale: 1){
+@mixin make-block($w: none, $h: none, $color: none, $skewDeg: -10deg, $radius: none, $scale: 1){
     // skew block의 필수 스타일
     display: block;
     transform: skewX($skewDeg) scale($scale, $scale);
