@@ -34,12 +34,9 @@ main{
         
         &:hover{
             @include mixins.skew-make-skew-block(
-                cons.$page-second-base-img-w,
-                cons.$page-second-base-img-h,
-                cons.$page-second-base-img-background-color-hover,
-                cons.$page-second-base-img-skew-x,
-                cons.$page-second-base-img-border-radius,
-                cons.$page-second-base-img-scale-hover
+                $color: cons.$page-second-base-img-background-color-hover,
+                $skewDeg: cons.$page-second-base-img-skew-x,
+                $scale: cons.$page-second-base-img-scale-hover
             );
             z-index: 1;
         }

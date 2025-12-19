@@ -17,27 +17,21 @@ main {
 main div {
   overflow: hidden;
   display: block;
+  transform: skewX(-10deg) scale(1, 1);
   width: 105px;
   height: 95px;
-  transform: skewX(-10deg) scale(1, 1);
   border-radius: 10px;
   background-color: lightgray;
   transition-duration: 1s;
 }
 main div img {
   display: block;
-  width: 100%;
-  height: auto;
   transform: skewX(10deg) scale(1, 1);
-  border-radius: 10px;
-  background-color: none;
+  width: 100%;
 }
 main div:hover {
   display: block;
-  width: 105px;
-  height: 95px;
   transform: skewX(-10deg) scale(1.5, 1.5);
-  border-radius: 10px;
   background-color: pink;
   z-index: 1;
 }/*# sourceMappingURL=second.css.map */
